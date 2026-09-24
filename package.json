@@ -1,0 +1,45 @@
+{
+  "name": "reverie",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build:contracts": "npm run build -w @reverie/contracts",
+    "dev": "concurrently -k -n contracts,api,web -c gray,cyan,magenta \"npm:dev:contracts\" \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:contracts": "npm run dev -w @reverie/contracts",
+    "dev:api": "npm run dev -w @reverie/api",
+    "dev:web": "npm run dev -w @reverie/web",
+    "build": "npm run build:contracts && npm run build -w @reverie/api && npm run build -w @reverie/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "video:studio": "npm run studio -w @reverie/video",
+    "video:smoke": "npm run smoke -w @reverie/video",
+    "video:smoke:reel": "npm run smoke:reel -w @reverie/video",
+    "video:smoke:terebina": "npm run smoke:terebina -w @reverie/video",
+    "video:smoke:terebina:graph": "npm run smoke:terebina:graph -w @reverie/video",
+    "video:smoke:terebina:minimal": "npm run smoke:terebina:minimal -w @reverie/video",
+    "video:smoke:terebina:sketch": "npm run smoke:terebina:sketch -w @reverie/video",
+    "video:smoke:terebina:notebook": "npm run smoke:terebina:notebook -w @reverie/video",
+    "video:smoke:terebina:cinematic": "npm run smoke:terebina:cinematic -w @reverie/video",
+    "dev:clean": "node -e \"require('fs').rmSync('apps/web/node_modules/.vite',{recursive:true,force:true})\" && npm run dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "concurrently": "^9.1.0",
+    "eslint": "^9.15.0",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  }
+}

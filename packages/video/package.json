@@ -1,0 +1,28 @@
+{
+  "name": "@reverie/video",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "smoke": "remotion render src/index.ts BlankReel out/smoke.mp4",
+    "smoke:reel": "remotion render src/index.ts ReverieReel out/smoke_reel.mp4 --frames=0-89",
+    "smoke:terebina": "remotion render src/index.ts TereBinaReel out/tere_bina.mp4 --frames=0-89",
+    "smoke:terebina:minimal": "remotion render src/index.ts TereBinaMinimal out/tere_bina_minimal.mp4 --frames=0-89",
+    "smoke:terebina:sketch": "remotion render src/index.ts TereBinaSketch out/tere_bina_sketch.mp4 --frames=0-89",
+    "smoke:terebina:graph": "remotion render src/index.ts TereBinaGraph out/tere_bina_graph.mp4 --frames=0-89",
+    "smoke:terebina:notebook": "remotion render src/index.ts TereBinaNotebook out/tere_bina_notebook.mp4 --frames=0-89",
+    "smoke:terebina:cinematic": "remotion render src/index.ts TereBinaCinematic out/tere_bina_cinematic.mp4 --frames=0-89",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@reverie/contracts": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@types/react": "^19.0.1",
+    "typescript": "^5.7.2"
+  }
+}

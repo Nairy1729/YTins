@@ -1,0 +1,129 @@
+<USER_REQUEST>
+# PROMPT 0 — MASTER PROJECT SPECIFICATION
+
+You are the lead product engineer, software architect, and creative UI/UX engineer for a new product we are building together.
+
+Your job is not simply to write code. You are responsible for helping build a polished, technically sound, visually impressive product that can eventually become a real-world SaaS application.
+
+We will build this product incrementally through clearly defined development phases. Do NOT jump ahead into future phases unless explicitly instructed.
+
+---
+
+# 1. PRODUCT VISION
+
+We are building an AI-powered platform that turns a song into a visually compelling short-form video.
+
+The core experience:
+
+YouTube song link
+→ identify/process the song
+→ obtain and synchronize lyrics where technically available
+→ understand the lyrics and mood
+→ create a visual interpretation
+→ combine lyrics, animation, music and visuals
+→ generate a vertical short-form video
+→ user previews and exports the final reel.
+
+The ultimate goal is:
+
+> "Give us a song, and we'll turn what the song feels like into a visual story."
+
+This should feel fundamentally different from a basic lyric-video generator.
+
+We are building a CREATIVE TOOL.
+
+The product should eventually be capable of producing things such as:
+
+* lyric-only videos
+* animated lyric videos
+* lyrical + animated videos
+* visually interpreted music reels
+* cinematic short videos
+* artistic/hand-drawn interpretations of songs
+
+The user should feel that the system understood the song rather than merely displaying its lyrics.
+
+---
+
+# 2. CORE USER FLOW
+
+The primary flow should eventually be:
+
+1. User opens the platform.
+2. User pastes a YouTube URL.
+3. Platform validates the URL.
+4. Platform identifies the song.
+5. Platform processes the required song information/audio through the appropriate backend pipeline.
+6. Platform obtains lyrics/timing where available.
+7. Lyrics are normalized and synchronized.
+8. AI analyzes:
+
+   * meaning
+   * 
+<truncated 15735 bytes>
+
+* senior full-stack engineer
+* software architect
+* creative frontend engineer
+* product designer
+* video rendering engineer
+* pragmatic technical lead
+
+Do not blindly follow instructions if you identify a serious architectural problem.
+
+If you believe a requested approach will cause significant problems, explain the issue briefly and propose a better approach.
+
+But do not unnecessarily block development over theoretical future problems.
+
+Favor practical implementation.
+
+---
+
+# 28. PHASE DISCIPLINE
+
+When I give you a phase prompt:
+
+* Work ONLY on that phase.
+* Inspect existing implementation first.
+* Reuse existing components/services.
+* Do not rewrite working code without reason.
+* Do not implement future phases.
+* Do not introduce unrelated features.
+* Test the result.
+* Update PROJECT_STATE.md.
+* Tell me exactly what was implemented.
+* Tell me how I can test it.
+* Tell me about any known limitations.
+
+At the end of every phase, STOP.
+
+Wait for the next phase instruction.
+
+---
+
+# 29. FIRST TASK — DO NOT START BUILDING YET
+
+For this prompt, DO NOT implement the product.
+
+Instead:
+
+1. Confirm that you understand the product.
+2. Analyze the proposed architecture.
+3. Identify any major technical risks or architectural changes you recommend.
+4. Propose the final folder structure.
+5. Propose the initial dependency list.
+6. Explain how the frontend, backend, AI layer and rendering engine will communicate.
+7. Explain any important decisions we should make before Phase 1.
+8. Create the initial PROJECT_STATE.md if the repository is already initialized.
+9. Do NOT implement Phase 1 yet.
+
+Keep the response practical and concise.
+
+We will review your architecture before beginning Phase 1.
+
+
+this is our prompt 0 for our project first check how much part is done and how much is reamining then comlete the reaming part from this part as we are doing this 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-24T19:19:18+05:30.
+</ADDITIONAL_METADATA>

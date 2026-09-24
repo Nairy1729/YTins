@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-void: #08080a;
+  --color-surface: #0e0e12;
+  --color-raised: #15151b;
+  --color-line: #22222b;
+  --color-line-strong: #33333f;
+
+  --color-ink: #ecebe8;
+  --color-muted: #8a8994;
+  --color-faint: #55545f;
+  --color-paper: #f4f0e8;
+  --color-brass: #c8a97e;
+
+  --color-ok: #6ecf8e;
+  --color-warn: #d9a441;
+  --color-err: #d1584a;
+
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Tight Variable', 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1;
+  --text-display: clamp(2.75rem, 8vw, 6.5rem);
+  --text-display--line-height: 0.95;
+  --text-title: clamp(1.75rem, 4vw, 3rem);
+  --text-title--line-height: 1.1;
+  --text-lead: clamp(1rem, 1.5vw, 1.1875rem);
+  --text-lead--line-height: 1.65;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background-color: var(--color-brass);
+    color: var(--color-void);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-void);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-strong);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
